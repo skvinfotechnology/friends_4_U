@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   #get 'home_page/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -6,7 +7,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'profile_informations#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+   resources :profile_informations
 
   # Example resource route with options:
   #   resources :products do
